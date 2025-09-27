@@ -12,51 +12,56 @@ on:
 
 jobs:
   test:
-    name: Tests
+    name: "Tests"
     runs-on: ubuntu-latest
+    timeout-minutes: 10
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-      - name: Setup node.js
-        uses: actions/setup-node@v1
+      - uses: actions/checkout@v5
+      - uses: pnpm/action-setup@v4
         with:
-          node-version: 20
-      - name: Install dependencies
-        uses: bahmutov/npm-install@v1
+          version: 10
+      - name: Install Node
+        uses: actions/setup-node@v5
+        with:
+          node-version: 20.x
+          cache: pnpm
+      - name: Install Dependencies
+        run: pnpm install --frozen-lockfile
       - name: Lint
-        run: yarn lint
-      - name: Test
-        run: yarn test:ember
+        run: pnpm lint
+      - name: Run Tests
+        run: pnpm test:ember
 
-  test-no-lock:
-    name: Floating Dependencies
+  floating:
+    name: "Floating Dependencies"
     runs-on: ubuntu-latest
-    needs:
-      - test
+    timeout-minutes: 10
+
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-      - name: Setup node.js
-        uses: actions/setup-node@v1
+      - uses: actions/checkout@v5
+      - uses: pnpm/action-setup@v4
         with:
-          node-version: 20
-      - name: Install dependencies
-        uses: bahmutov/npm-install@v1
+          version: 10
+      - uses: actions/setup-node@v5
         with:
-          useLockFile: false
-      - name: Test
-        run: yarn test:ember
+          node-version: 20.x
+          cache: pnpm
+      - name: Install Dependencies
+        run: pnpm install --no-lockfile
+      - name: Run Tests
+        run: pnpm test:ember
 
-  test-try:
-    name: Additional Tests
+  try-scenarios:
+    name: ${{ matrix.try-scenario }}
     runs-on: ubuntu-latest
-    continue-on-error: ${{ matrix.allow-failure }}
-    needs:
-      - test
+    needs: "test"
+    timeout-minutes: 10
+
     strategy:
+      fail-fast: false
       matrix:
-        scenario:
+        try-scenario:
           - ember-lts-3.28
           # - ember-lts-4.12
           # - ember-release
@@ -64,18 +69,18 @@ jobs:
           - ember-default-with-jquery
           - ember-classic
           - ember-bootstrap-4.4
-        allow-failure: [false]
-        # include:
-        #   - scenario: ember-canary
-        #     allow-failure: true
+
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-      - name: Setup node.js
-        uses: actions/setup-node@v1
+      - uses: actions/checkout@v5
+      - uses: pnpm/action-setup@v4
         with:
-          node-version: 20
-      - name: Install dependencies
-        uses: bahmutov/npm-install@v1
-      - name: Test
-        run: yarn ember try:one ${{ matrix.scenario }}
+          version: 10
+      - name: Install Node
+        uses: actions/setup-node@v5
+        with:
+          node-version: 20.x
+          cache: pnpm
+      - name: Install Dependencies
+        run: pnpm install --frozen-lockfile
+      - name: Run Tests
+        run: ./node_modules/.bin/ember try:one ${{ matrix.try-scenario }}
