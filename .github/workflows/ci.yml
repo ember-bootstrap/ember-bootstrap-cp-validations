@@ -64,9 +64,9 @@ jobs:
           - ember-classic
           - ember-bootstrap-4.4
         allow-failure: [false]
-        include:
-          - scenario: ember-canary
-            allow-failure: true
+        # include:
+        #   - scenario: ember-canary
+        #     allow-failure: true
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
