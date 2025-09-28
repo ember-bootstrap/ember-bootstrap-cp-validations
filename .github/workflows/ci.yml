@@ -69,6 +69,9 @@ jobs:
           - ember-default-with-jquery
           - ember-classic
           - ember-bootstrap-4.4
+          - ember-cp-validations-4
+          - ember-cp-validations-5
+          - ember-cp-validations-6
 
     steps:
       - uses: actions/checkout@v5
