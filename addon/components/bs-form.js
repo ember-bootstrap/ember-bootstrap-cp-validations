@@ -14,11 +14,15 @@ export default class ValidatedBsFrom extends BsForm {
   async validate(model) {
     let m = model;
 
-    if (model instanceof ObjectProxy && model.get('content') && typeof model.get('content').validate === 'function') {
+    if (
+      model instanceof ObjectProxy &&
+      model.get('content') &&
+      typeof model.get('content').validate === 'function'
+    ) {
       m = model.get('content');
     }
 
-    await m.validate()
+    await m.validate();
     if (!model.validations.isTruelyValid) {
       throw new Error();
     }

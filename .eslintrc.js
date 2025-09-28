@@ -19,7 +19,10 @@ module.exports = {
   env: {
     browser: true,
   },
-  rules: {},
+  rules: {
+    'ember/no-classic-classes': 'warn',
+    'ember/no-computed-properties-in-native-classes': 'warn',
+  },
   overrides: [
     // node files
     {
@@ -48,6 +51,9 @@ module.exports = {
       // Test files:
       files: ['tests/**/*-test.{js,ts}'],
       extends: ['plugin:qunit/recommended'],
+      rules: {
+        'qunit/require-expect': 'warn',
+      },
     },
   ],
 };

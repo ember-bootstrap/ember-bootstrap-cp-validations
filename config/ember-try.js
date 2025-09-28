@@ -11,17 +11,17 @@ module.exports = async function () {
         name: 'ember-lts-3.28',
         npm: {
           devDependencies: {
-            'ember-source': '~3.28.0'
-          }
-        }
+            'ember-source': '~3.28.0',
+          },
+        },
       },
       {
         name: 'ember-lts-4.12',
         npm: {
           devDependencies: {
-            'ember-source': '~4.12.0'
-          }
-        }
+            'ember-source': '~4.12.0',
+          },
+        },
       },
       {
         name: 'ember-release',
@@ -74,42 +74,44 @@ module.exports = async function () {
             'ember-source': '~3.28.0',
           },
           ember: {
-            edition: 'classic'
-          }
-        }
+            edition: 'classic',
+          },
+        },
       },
       {
         name: 'ember-bootstrap-4.4',
         npm: {
           devDependencies: {
-            'ember-bootstrap': '~4.4.0'
-          }
-        }
+            'ember-bootstrap': '~4.4.0',
+          },
+        },
       },
       {
         name: 'ember-cp-validations-4',
         npm: {
           devDependencies: {
-            'ember-cp-validations': '^4.0.0'
-          }
-        }
+            'ember-cp-validations': '^4.0.0',
+          },
+        },
       },
       {
         name: 'ember-cp-validations-5',
         npm: {
           devDependencies: {
-            'ember-cp-validations': '^5.0.0'
-          }
-        }
+            'ember-cp-validations': '^5.0.0',
+          },
+        },
       },
       {
         name: 'ember-cp-validations-6',
         npm: {
           devDependencies: {
-            'ember-cp-validations': '^6.0.0'
-          }
-        }
+            'ember-cp-validations': '^6.0.0',
+          },
+        },
       },
-    ]
+      embroiderSafe(),
+      embroiderOptimized(),
+    ],
   };
 };
