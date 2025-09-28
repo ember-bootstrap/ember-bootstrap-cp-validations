@@ -70,8 +70,8 @@ importers:
         specifier: ^3.0.0
         version: 3.0.1(ember-source@3.28.12(@babel/core@7.28.4))
       ember-maybe-import-regenerator:
-        specifier: ^0.1.6
-        version: 0.1.6(@babel/core@7.28.4)
+        specifier: ^1.0.0
+        version: 1.0.0
       ember-qunit:
         specifier: ^4.6.0
         version: 4.6.0(@babel/core@7.28.4)
@@ -2944,9 +2944,9 @@ packages:
     peerDependencies:
       ember-source: '>= 5'
 
-  ember-maybe-import-regenerator@0.1.6:
-    resolution: {integrity: sha512-aX9UINiUXIjzsCNNna1ioASB/2lbnFgSHI63bBcd4MOVE9AqoLdOL7h+ocyylYXyYoBj2JDRwCzjWNf2Xbp5wg==}
-    engines: {node: '>= 0.10.0'}
+  ember-maybe-import-regenerator@1.0.0:
+    resolution: {integrity: sha512-wtjgjEV0Hk4fgiAwFjOfPrGWfmFrbRW3zgNZO4oA3H5FlbMssMvWuR8blQ3QSWYHODVK9r+ThsRAs8lG4kbxqA==}
+    engines: {node: '>= 12.*'}
 
   ember-modifier-manager-polyfill@1.2.0:
     resolution: {integrity: sha512-bnaKF1LLKMkBNeDoetvIJ4vhwRPKIIumWr6dbVuW6W6p4QV8ZiO+GdF8J7mxDNlog9CeL9Z/7wam4YS86G8BYA==}
@@ -5544,9 +5544,6 @@ packages:
 
   regenerator-runtime@0.13.11:
     resolution: {integrity: sha512-kY1AZVr2Ra+t+piVaJ4gxaFaReZVH40AKNo7UCX6W+dEwBo/2oZJzqfuN1qLq1oL45o56cPaTXELwrTh8Fpggg==}
-
-  regenerator-runtime@0.9.6:
-    resolution: {integrity: sha512-D0Y/JJ4VhusyMOd/o25a3jdUqN/bC85EFsaoL9Oqmy/O4efCh+xhp7yj2EEOsj974qvMkcW8AwUzJ1jB/MbxCw==}
 
   regenerator-transform@0.10.1:
     resolution: {integrity: sha512-PJepbvDbuK1xgIgnau7Y90cwaAmO/LCLMI2mPvaXq2heGMR3aWW5/BQvYrhJ8jgmQjXewXvBjzfqKcVOmhjZ6Q==}
@@ -11045,14 +11042,13 @@ snapshots:
     dependencies:
       ember-source: 3.28.12(@babel/core@7.28.4)
 
-  ember-maybe-import-regenerator@0.1.6(@babel/core@7.28.4):
+  ember-maybe-import-regenerator@1.0.0:
     dependencies:
-      broccoli-funnel: 1.2.0
-      broccoli-merge-trees: 1.2.4
-      ember-cli-babel: 6.18.0(@babel/core@7.28.4)
-      regenerator-runtime: 0.9.6
+      broccoli-funnel: 2.0.2
+      broccoli-merge-trees: 3.0.2
+      ember-cli-babel: 7.26.11
+      regenerator-runtime: 0.13.11
     transitivePeerDependencies:
-      - '@babel/core'
       - supports-color
 
   ember-modifier-manager-polyfill@1.2.0(@babel/core@7.28.4):
@@ -14310,8 +14306,6 @@ snapshots:
   regenerator-runtime@0.11.1: {}
 
   regenerator-runtime@0.13.11: {}
-
-  regenerator-runtime@0.9.6: {}
 
   regenerator-transform@0.10.1:
     dependencies:
