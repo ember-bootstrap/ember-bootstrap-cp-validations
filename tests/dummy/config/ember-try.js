@@ -64,14 +64,6 @@ module.exports = async function () {
         },
       },
       {
-        name: 'ember-cp-validations-4',
-        npm: {
-          devDependencies: {
-            'ember-cp-validations': '^4.0.0',
-          },
-        },
-      },
-      {
         name: 'ember-cp-validations-5',
         npm: {
           devDependencies: {
