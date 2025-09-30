@@ -72,8 +72,6 @@ jobs:
           # - ember-lts-5.12
           # - ember-release
           # - ember-beta
-          - ember-default-with-jquery
-          - ember-classic
           - ember-cp-validations-4
           - ember-cp-validations-5
           - ember-cp-validations-6
