@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       ember-cli-babel:
-        specifier: ^7.26.11
-        version: 7.26.11
+        specifier: ^8.0.0
+        version: 8.2.0(@babel/core@7.28.4)
       ember-cli-htmlbars:
         specifier: ^6.2.0
         version: 6.3.0
