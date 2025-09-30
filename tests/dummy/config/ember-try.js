@@ -55,7 +55,6 @@ module.exports = async function () {
           },
         },
       },
-<<<<<<< HEAD:config/ember-try.js
       {
         name: 'ember-default-with-jquery',
         env: {
@@ -111,8 +110,6 @@ module.exports = async function () {
           },
         },
       },
-=======
->>>>>>> e959439 (v3.28.6...v4.12.3):tests/dummy/config/ember-try.js
       embroiderSafe(),
       embroiderOptimized(),
     ],

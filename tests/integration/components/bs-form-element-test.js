@@ -160,6 +160,7 @@ module('Integration | Component | bs form element', function (hooks) {
     };
 
     await render(hbs`
+      {{!-- template-lint-disable require-input-label --}}
       <BsForm @onSubmit={{this.submitAction}} @onInvalid={{this.invalidAction}}>
         <Input @type="text" @value={{this.name}} />
       </BsForm>
