@@ -50,7 +50,7 @@
     "@glimmer/tracking": "^1.1.2",
     "bootstrap": "^5.0.0",
     "broccoli-asset-rev": "^3.0.0",
-    "concurrently": "^8.0.1",
+    "concurrently": "^9.0.0",
     "ember-auto-import": "^2.6.3",
     "ember-bootstrap": "^6.0.0",
     "ember-cli": "~6.7.0",
