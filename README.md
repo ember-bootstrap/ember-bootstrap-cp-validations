@@ -9,11 +9,11 @@ further details.
 
 ## Compatibility
 
-* Ember Bootstrap v5
-* Ember CP Validations v5
-* Ember.js v3.28 or above
-* Ember CLI v3.28 or above
-* Node.js v20 or above
+- Ember Bootstrap v5
+- Ember CP Validations v5
+- Ember.js v3.28 or above
+- Ember CLI v3.28 or above
+- Node.js v20 or above
 
 ## Installation
 
@@ -33,13 +33,13 @@ ember install ember-cp-validations
 Define your model and its validations as described in [Ember CP Validations](https://github.com/offirgolan/ember-cp-validations):
 
 ```js
-import Ember from 'ember';
-import { validator, buildValidations } from 'ember-cp-validations';
+import Ember from "ember";
+import { validator, buildValidations } from "ember-cp-validations";
 
 const Validations = buildValidations({
-  username: validator('presence', true),
-  email: validator('format', { type: 'email' }),
-  password: validator('length', { min: 10 }),
+  username: validator("presence", true),
+  email: validator("format", { type: "email" }),
+  password: validator("length", { min: 10 }),
 });
 
 export default Ember.Component.extend(Validations, {
@@ -55,7 +55,11 @@ Then assign the model to your form:
 <BsForm @model={{this}} as |form|>
   <form.element @label="Username" @controlType="text" @property="username" />
   <form.element @label="Email" @controlType="email" @property="email" />
-  <form.element @label="Password" @controlType="password" @property="password" />
+  <form.element
+    @label="Password"
+    @controlType="password"
+    @property="password"
+  />
   <form.submitButton>Submit</form.submitButton>
 </BsForm>
 ```
