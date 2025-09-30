@@ -4,9 +4,21 @@
 
 <BsForm @model={{this.model}} @onSubmit={{this.submit}} as |form|>
   <form.element @controlType="email" @label="Email" @property="email" />
-  <form.element @controlType="email" @label="Email Confirmation" @property="emailConfirmation" />
+  <form.element
+    @controlType="email"
+    @label="Email Confirmation"
+    @property="emailConfirmation"
+  />
   <form.element @controlType="text" @label="Username" @property="username" />
-  <form.element @controlType="password" @label="Password" @property="password" />
-  <form.element @controlType="checkbox" @label="Remember me" @property="rememberMe" />
+  <form.element
+    @controlType="password"
+    @label="Password"
+    @property="password"
+  />
+  <form.element
+    @controlType="checkbox"
+    @label="Remember me"
+    @property="rememberMe"
+  />
   <form.submitButton>Submit</form.submitButton>
 </BsForm>
