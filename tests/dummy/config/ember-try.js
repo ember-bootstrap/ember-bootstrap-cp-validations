@@ -11,7 +11,7 @@ module.exports = async function () {
         name: 'ember-lts-3.28',
         npm: {
           devDependencies: {
-            'ember-source': '~3.28.0',
+            'ember-source': '~4.8.0',
           },
         },
       },
@@ -20,6 +20,14 @@ module.exports = async function () {
         npm: {
           devDependencies: {
             'ember-source': '~4.12.0',
+          },
+        },
+      },
+      {
+        name: 'ember-lts-5.12',
+        npm: {
+          devDependencies: {
+            'ember-source': '~5.12.0',
           },
         },
       },
@@ -47,6 +55,7 @@ module.exports = async function () {
           },
         },
       },
+<<<<<<< HEAD:config/ember-try.js
       {
         name: 'ember-default-with-jquery',
         env: {
@@ -102,6 +111,8 @@ module.exports = async function () {
           },
         },
       },
+=======
+>>>>>>> e959439 (v3.28.6...v4.12.3):tests/dummy/config/ember-try.js
       embroiderSafe(),
       embroiderOptimized(),
     ],
