@@ -3,22 +3,17 @@ name: CI
 on:
   push:
     branches:
-<<<<<<< HEAD
+      - main
       - master
     tags:
       - '*'
-  pull_request:
+  pull_request: {}
   schedule:
     - cron:  '0 4 * * 5' # Fridays at 4am
-=======
-      - main
-      - master
-  pull_request: {}
 
 concurrency:
   group: ci-${{ github.head_ref || github.ref }}
   cancel-in-progress: true
->>>>>>> e959439 (v3.28.6...v4.12.3)
 
 jobs:
   test:
