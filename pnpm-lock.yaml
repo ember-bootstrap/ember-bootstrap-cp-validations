@@ -30,6 +30,9 @@ importers:
       '@ember/optional-features':
         specifier: ^2.2.0
         version: 2.2.0
+      '@ember/string':
+        specifier: ^4.0.1
+        version: 4.0.1
       '@ember/test-helpers':
         specifier: ^5.2.1
         version: 5.3.0(@babel/core@7.28.4)
@@ -806,6 +809,9 @@ packages:
     peerDependenciesMeta:
       '@glint/template':
         optional: true
+
+  '@ember/string@4.0.1':
+    resolution: {integrity: sha512-VWeng8BSWrIsdPfffOQt/bKwNKJL7+37gPFh/6iZZ9bke+S83kKqkS30poo4bTGfRcMnvAE0ie7txom+iDu81Q==}
 
   '@ember/test-helpers@5.3.0':
     resolution: {integrity: sha512-CG3Iiap0vbrjtOzRg4cN0fd7fMUVhFK5gURkc8yQGJtKT3LwXLLtCLkMG/A55sMTIYHlYRETuJXqv9slO90RKw==}
@@ -7699,6 +7705,8 @@ snapshots:
     transitivePeerDependencies:
       - '@babel/core'
       - supports-color
+
+  '@ember/string@4.0.1': {}
 
   '@ember/test-helpers@5.3.0(@babel/core@7.28.4)':
     dependencies:
