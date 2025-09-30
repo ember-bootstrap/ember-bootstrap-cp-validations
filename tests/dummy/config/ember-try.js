@@ -11,6 +11,10 @@ module.exports = async function () {
         name: 'ember-lts-3.28',
         npm: {
           devDependencies: {
+            '@glimmer/component': '^1.1.2',
+            'ember-bootstrap': '^5.0.0',
+            'ember-cli': '~4.12.0',
+            'ember-resolver': '^11.0.0',
             'ember-source': '~3.28.0',
           },
         },
@@ -52,14 +56,6 @@ module.exports = async function () {
         npm: {
           devDependencies: {
             'ember-source': await getChannelURL('canary'),
-          },
-        },
-      },
-      {
-        name: 'ember-bootstrap-5',
-        npm: {
-          devDependencies: {
-            'ember-bootstrap': '^5.0.0',
           },
         },
       },
