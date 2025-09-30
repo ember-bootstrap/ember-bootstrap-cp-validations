@@ -29,13 +29,13 @@ export default class ValidatedBsFormElement extends BsFormElement {
       defineProperty(
         this,
         '_attrValidations',
-        readOnly(`args.model.validations.attrs.${this.args.property}`)
+        readOnly(`args.model.validations.attrs.${this.args.property}`),
       );
     } else {
       defineProperty(
         this,
         '_attrValidations',
-        readOnly(`model.validations.attrs.${this.property}`)
+        readOnly(`model.validations.attrs.${this.property}`),
       );
     }
   }
