@@ -3,12 +3,17 @@ name: CI
 on:
   push:
     branches:
+      - main
       - master
     tags:
       - '*'
-  pull_request:
+  pull_request: {}
   schedule:
     - cron:  '0 4 * * 5' # Fridays at 4am
+
+concurrency:
+  group: ci-${{ github.head_ref || github.ref }}
+  cancel-in-progress: true
 
 jobs:
   test:
@@ -63,7 +68,8 @@ jobs:
       matrix:
         try-scenario:
           - ember-lts-3.28
-          # - ember-lts-4.12
+          - ember-lts-4.12
+          # - ember-lts-5.12
           # - ember-release
           # - ember-beta
           - ember-cp-validations-4

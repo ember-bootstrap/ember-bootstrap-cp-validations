@@ -1,5 +1,4 @@
-ember-bootstrap-cp-validations
-==============================================================================
+# ember-bootstrap-cp-validations
 
 [![npm version](https://badge.fury.io/js/ember-bootstrap-cp-validations.svg)](http://badge.fury.io/js/ember-bootstrap-cp-validations)
 
@@ -8,8 +7,7 @@ This way your forms are only submitted when the underlying data is valid, otherw
 markup will be applied. See the [FormElement documentation](https://www.ember-bootstrap.com/api/classes/Components.FormElement.html) for
 further details.
 
-Compatibility
-------------------------------------------------------------------------------
+## Compatibility
 
 * Ember Bootstrap v5
 * Ember CP Validations v4
@@ -17,9 +15,7 @@ Compatibility
 * Ember CLI v3.28 or above
 * Node.js v20 or above
 
-
-Installation
-------------------------------------------------------------------------------
+## Installation
 
 ```
 ember install ember-bootstrap-cp-validations
@@ -32,8 +28,7 @@ ember install ember-bootstrap
 ember install ember-cp-validations
 ```
 
-Usage
-------------------------------------------------------------------------------
+## Usage
 
 Define your model and its validations as described in [Ember CP Validations](https://github.com/offirgolan/ember-cp-validations):
 
@@ -65,13 +60,11 @@ Then assign the model to your form:
 </BsForm>
 ```
 
-Contributing
-------------------------------------------------------------------------------
+## Contributing
 
 See the [Contributing](CONTRIBUTING.md) guide for details.
 
 
-License
-------------------------------------------------------------------------------
+## License
 
 This project is licensed under the [MIT License](LICENSE.md).
