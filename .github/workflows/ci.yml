@@ -72,7 +72,6 @@ jobs:
           - ember-lts-5.12
           - ember-release
           - ember-beta
-          - ember-bootstrap-5
           - ember-cp-validations-5
           - ember-cp-validations-6
 
