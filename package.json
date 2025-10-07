@@ -78,7 +78,7 @@
     "ember-template-lint": "7.9.3",
     "ember-try": "4.0.0",
     "eslint": "9.37.0",
-    "eslint-config-prettier": "9.1.2",
+    "eslint-config-prettier": "10.1.8",
     "eslint-plugin-ember": "12.7.4",
     "eslint-plugin-n": "17.23.1",
     "eslint-plugin-qunit": "8.2.5",
