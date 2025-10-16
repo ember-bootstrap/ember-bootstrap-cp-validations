@@ -9,11 +9,21 @@ further details.
 
 ## Compatibility
 
-- Ember Bootstrap v5
-- Ember CP Validations v5
+- Ember Bootstrap v5 or above
+- Ember CP Validations v5 or above
 - Ember.js v3.28 or above
 - Ember CLI v3.28 or above
 - Node.js v20 or above
+
+## Requirements
+
+This addon requires the following minimum versions in the host application. It's recommended to install these (or newer) before installing this addon:
+
+- ember-bootstrap: >= 5.0.0
+- ember-cp-validations: >= 5.0.0
+- ember-source (Ember.js): >= 3.28.0
+- Ember CLI: >= 3.28.0
+- Node.js: >= 20.0.0
 
 ## Installation
 
