@@ -5,8 +5,9 @@ const EmberAddon = require('ember-cli/lib/broccoli/ember-addon');
 module.exports = function (defaults) {
   const app = new EmberAddon(defaults, {
     'ember-bootstrap': {
-      bootstrapVersion: 4,
-      importBootstrapCSS: true,
+      bootstrapVersion: 5,
+      importBootstrapCSS: false,
+      insertEmberWormholeElementToDom: false,
     },
   });
 
